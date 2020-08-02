@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    
+    <style>
+        h1   {
+            color: salmon;
+            text-align:center;
+        }
+        
+        .button {
+            
+          background-color: salmon;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 23px;
+          margin: 4px 2px;
+          cursor: pointer;
+}
+        
+        
+        
+        
+        
+        
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 25%;
+        }
+        
+        body  {
+              background-image: url("https://img.wallpapersafari.com/tablet/768/1024/35/54/tspVxw.jpg");
+
+            }
+
+        
+        
+        
+        img {
+            height: 30%;
+  
+}
+    
+    </style>
+    <script>
+        
+        var topCounter = 0;
+        var bottomCounter = 0;
+        
+        var shirts = 
+            ["shirt1.jpeg","shirt2.jpeg","shirt3.jpeg","shirt4.jpeg","shirt5.jpeg","shirt6.jpeg","shirt7.jpeg"]
+        var pants = 
+            ["pant1.jpeg","pant2.jpeg","pant3.jpeg","pant4.jpeg","pant5.jpeg","pant6.jpeg","pant7.jpeg"]
+        
+        
+         function nextTop(){
+            if(topCounter == 7){
+                topCounter = 0
+            }
+            topCounter = topCounter + 1 
+
+             
+             document.getElementById("top").src = shirts[topCounter];
+             
+         }
+        
+        
+         function nextBottom(){
+             if(bottomCounter == 6){
+                 bottomCounter = 0
+                 
+             }
+             bottomCounter = bottomCounter + 1 
+              
+              document.getElementById("bottom").src = pants[bottomCounter];
+             
+         }
+        
+        
+        function getRandomIntInclusive(min, max) {
+              min = Math.ceil(min);
+              max = Math.floor(max);
+              return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+}
+            
+            
+        function randomize(){
+            var randomNumberTop = getRandomIntInclusive(0,6)
+            var randomNumberBottom = getRandomIntInclusive(0,6)
+            
+            document.getElementById("top").src = shirts[randomNumberTop];
+            document.getElementById("bottom").src = pants[randomNumberBottom];
+             
+            
+            
+        }    
+            
+            
+        
+       
+    </script>    
+    
+</head>
+    
+    <body>
+        <h1>𝓤𝓻𝓿𝓲'𝓼 𝓒𝓾𝓼𝓽𝓸𝓶 𝓒𝓵𝓸𝓼𝓮𝓽 special occasion edition
+</h1>
+        <img id = "top" src = "Girls/shirt1.png" > 
+        <button class = "button" onClick = "nextTop()">ηєχт</button>
+        
+        <br/>
+        
+    
+        <img id = "bottom" src = "Girls/pant1.png" >
+        <button class = "button" onClick = "nextBottom()">ηєχт</button>
+        
+        <br/>
+        
+        <button class = "button" onClick= "randomize()">вяσωѕє</button>
+    </body>
+
+    
+</html>
