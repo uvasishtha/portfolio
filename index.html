@@ -27,23 +27,21 @@
 
     /* === Marquee bar fixed height and font size === */
     .color-box {
-      background-color: #cfb4ae;
-      height: 30px;
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-    }
+  background-color: #cfb4ae;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%; /* Ensure it spans full width */
+}
 
-    .marquee {
-      display: inline-block;
-      animation: marquee 15s linear infinite;
-      font-size: 18px;
-      line-height: 30px;
-      padding-left: 100%;
-      color: antiquewhite;
-      font-weight: 700;
-      font-family: 'Raleway', sans-serif;
-    }
+.marquee {
+  font-size: 14px;
+  color: antiquewhite;
+  display: block; /* Make it a block element */
+  width: 100%;    /* Full width */
+  line-height: 30px; /* Center vertically in the bar */
+}
 
     @keyframes marquee {
       0% {
